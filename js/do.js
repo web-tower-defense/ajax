@@ -1,1 +1,6 @@
-var app = require(fs);
+var a = ""||"abc";
+if(""==true){
+    console.log("true");
+}else{
+    console.log("false"+a);
+}

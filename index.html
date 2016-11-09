@@ -2,19 +2,37 @@
 
 <head>
     <title>找名字</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!-- <h1>想知道同學的名字嗎？？</h1>
-    <form action='get.njs' method='GET'>
-        請輸入同學的學號 : <input type='text' name='fname'><br>
-        <input type='submit' value='get submit'>
-    </form> -->
-    <form action="http://127.0.0.1:8081/process_get" method="GET">
-        First Name: <input type="text" name="first_name"> <br> Last Name: <input type="text" name="last_name">
-        <input type="submit" value="Submit">
-    </form>
+    <h1>想知道同學的名字嗎？？</h1>
+
+    <p>
+        請輸入同學的學號(英文大寫) :
+    </p>
+    <input type='text' id='studentId'><br>
+    <br>
+    <button onclick='myFunction()' type="button" name="button">確定</button>
+    <script type="text/javascript">
+        function myFunction() {
+            var xhr = new XMLHttpRequest(),
+                method = "GET",
+                studentId = document.getElementById('studentId').value||"hello",
+                url = "http://127.0.0.1:8081/"+studentId;
+
+            xhr.open(method, url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    if(xhr.responseText===""){
+                        alert("沒找到這同學");
+                    }{
+                        alert(xhr.responseText);
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
 </body>
 
 </html>
