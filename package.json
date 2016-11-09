@@ -1,0 +1,33 @@
+{
+  "name": "ajax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "express": "^4.14.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-notify": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-tower-defense/ajax.git"
+  },
+  "author": "ryanpatiency <ryanpatiency@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-tower-defense/ajax/issues"
+  },
+  "homepage": "https://github.com/web-tower-defense/ajax#readme"
+}
